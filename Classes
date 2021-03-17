@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace classes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Two ways to store values in a object propreties
+            Car myCar = new Car();
+            myCar.Make = "Hyunday";
+            myCar.Model = "Accent";
+            myCar.Year = 2011;
+
+
+            var jordanCar = new Car()
+            {
+                Make = "Toyota",
+                Year = 2021,
+                Model = "Corola"
+            };
+
+            var JordanCar = new Car("Toyota", "Corola", 2001);
+            var carList = new List<Car>() { myCar, jordanCar, JordanCar };
+
+            foreach (var i in carList)
+            {
+                Console.WriteLine(i);
+                Console.WriteLine($"{i.Make} {i.Model} {i.Year}");
+            }
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        }
+    }
+}
